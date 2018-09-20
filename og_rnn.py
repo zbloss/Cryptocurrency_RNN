@@ -9,7 +9,7 @@ import time
 
 SEQ_LEN = 60  # how long of a preceeding sequence to collect for RNN
 FUTURE_PERIOD_PREDICT = 3  # how far into the future are we trying to predict?
-RATIO_TO_PREDICT = "LTC-USD"
+RATIO_TO_PREDICT = "BTC-USD"
 
 
 def classify(current, future):
@@ -174,8 +174,8 @@ print(f"VALIDATION Dont buys: {validation_y.count(0)}, buys: {validation_y.count
 
 
 EPOCHS = 10
-BATCH_SIZE = 64
-NAME = f"{SEQ_LEN}-SEQ-{FUTURE_PERIOD_PREDICT}-PRED-{int(time.time())}"
+BATCH_SIZE = 128
+NAME = f"{EPOCHS}-EPOCHS-{RATIO_TO_PREDICT}-{SEQ_LEN}-SEQ-{FUTURE_PERIOD_PREDICT}-PRED-{BATCH_SIZE}-BATSZ-{int(time.time())}"
 
 
 import tensorflow as tf
