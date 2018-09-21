@@ -152,7 +152,7 @@ for coin in RATIOS_TO_PREDICT:
         for batch_size in BATCH_SIZES:
             for epoch_size in EPOCHS:
                 
-                NAME = f"{RATIO}-RATIO-{seq}-SEQ-{batch_size}-BATCH-{epoch_size}-EPOCHS-{FUTURE_PERIOD_PREDICT}-PRED-{int(time.time())}"
+                NAME = f"{coin}-RATIO-{seq}-SEQ-{batch_size}-BATCH-{epoch_size}-EPOCHS-{FUTURE_PERIOD_PREDICT}-PRED-{int(time.time())}"
                 #NAME = f"{SEQ_LEN}-SEQ-{FUTURE_PERIOD_PREDICT}-PRED-{int(time.time())}"
 
                 main_df['future'] = main_df[f'{coin}_close'].shift(-FUTURE_PERIOD_PREDICT)
